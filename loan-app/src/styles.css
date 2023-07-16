@@ -1,0 +1,118 @@
+/*
+======================================
+; Title: styles.css
+; Author: Janis Gonzalez
+; Date: July 16, 2023
+; Description: style.css file for loan app capstone
+; Sources Used:
+; WEB-425 Capstone Instructions
+;=====================================
+*/
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+/* background color */
+
+.bg-green {
+    background-color: #1a472a;
+}
+
+.bg-lighter-green {
+    background-color: #2a623d;
+}
+
+.bg-grey {
+    background-color: #5d5d5d;
+}
+
+.bg-lighter-grey {
+    background-color: #aaaaaa;
+}
+
+.bg-yellow {
+    background-color: #9e7e00;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+
+/* font colors */
+
+.font-white {
+    color: white;
+}
+
+.font-yellow {
+    color: #9e7e00;
+}
+
+.font-black {
+    color: black;
+}
+
+
+/* text for interest and monthly */
+
+.interest-paid {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 48px;
+}
+
+.monthly-payment {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 48px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* logo */
+
+.logo {
+    margin-top: 5px;
+}
+
+.main-container {
+    padding-top: 25px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.results {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 48px;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 36px;
+}
+
+
+/* error message */
+
+.msg-error {
+    margin: 10px 0;
+    padding: 12px;
+    color: #c5060f;
+    background-color: #e6cccc;
+}
+
+.padding-right {
+    padding-right: 80px;
+}

@@ -1,0 +1,19 @@
+<!--
+======================================
+; Title: monthly-payment.component.html
+; Author: Janis Gonzalez
+; Date: July 16, 2023
+; Description: monthly payment component HTML file
+; Sources Used:
+; WEB425 Capstone Instructions
+=====================================
+-->
+
+<div>
+    <div class="monthly-payment font-black">
+        Your monthly payment:
+    </div><br><br>
+    <div class="monthly-payment font-white">
+        {{ "$" + (monthlyPayment | number:'1.2-2') }}
+    </div>
+</div>

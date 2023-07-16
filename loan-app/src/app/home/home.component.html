@@ -1,0 +1,96 @@
+<!--
+======================================
+; Title: home.component.html
+; Author: Janis Gonzalez
+; Date: July 16, 2023
+; Description: home component HTML file
+; Sources Used:
+; WEB425 Capstone Instructions
+=====================================
+-->
+
+<mat-card class="bg-lighter-green">
+    <mat-card-content>
+        <div fxLayout="row wrap">
+            <!--User Inputs-->
+            <div fxFlex>
+                <mat-card class="mat-elevation-z0 bg-green">
+
+                    <mat-card-title></mat-card-title>
+
+                    <mat-card-content class="center">
+
+                        <!--Form Begin-->
+                        <form fxLayout="column" class="bg-green" [formGroup]="loanDetailsForm">
+
+                            <!-- Loan Amount Error Message-->
+                            <div *ngIf="form.loanAmount.errors && form.loanAmount.touched">
+                                <div class="msg-error">
+                                    Loan Amount must be a numeric value with NO COMMAS
+                                </div>
+                            </div>
+                            <!-- Loan Amount Input-->
+                            <mat-form-field fxFlex appearance="fill" color="accent">
+                                <mat-label class="font-black">Loan Amount</mat-label>
+                                <input type="text" placeholder="Enter a numeric dollar value, NO COMMAS!" class="font-white bg-lighter-green" name="loanAmount" matInput formControlName="loanAmount">
+                            </mat-form-field>
+
+                            <!-- Interest Error Message-->
+                            <div *ngIf="form.interestRate.errors && form.interestRate.touched">
+                                <div class="msg-error">
+                                    Interest Rate must be a numeric value
+                                </div>
+                            </div>
+                            <!-- Interest Rate Input-->
+                            <mat-form-field fxFlex appearance="fill" color="accent">
+                                <mat-label class="font-black">Interest Rate</mat-label>
+                                <input type="text" placeholder="ex: 4.5" name="interestRate" matInput formControlName="interestRate">
+                            </mat-form-field>
+
+                            <!-- Number of years Error Message-->
+                            <div *ngIf="form.numOfYears.errors && form.numOfYears.touched">
+                                <div class="msg-error">
+                                    Number of Years must be a whole number
+                                </div>
+                            </div>
+                            <!-- Number Of Years Input-->
+                            <mat-form-field fxFlex appearance="fill" color="accent">
+                                <mat-label class="font-black">Number of Years</mat-label>
+                                <input type="text" placeholder="Enter a whole number" name="numOfYears" matInput formControlName="numOfYears">
+                            </mat-form-field>
+
+                            <!-- Calculate Button -->
+                            <button [disabled]="!loanDetailsForm.valid" mat-raised-button class="bg-yellow font-white" (click)="calculateResults()">Calculate</button>
+                            <br><br>
+
+                            <!-- Start Over Button -->
+                            <button mat-raised-button (click)="resetEntries()" class="bg-yellow font-white">Start Over</button>
+                        </form>
+                        <!--Form End-->
+
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <!-- Results Area -->
+            <div fxFlex class="bg-lighter-green">
+                <mat-card class="bg-green mat-elevation-z0">
+                    <mat-card-title class="font-white center results">Results:</mat-card-title><br><br>
+                    <mat-card-content class="center"><br><br>
+
+                        <!--Component Apps Begin-->
+                        <app-monthly-payment [monthlyPayment]="monthlyPayment"></app-monthly-payment>
+                        <br><br><br>
+                        <app-interest [interest]="interest"></app-interest>
+                        <br><br><br>
+                        <!--Component Apps End-->
+
+
+                    </mat-card-content>
+
+                </mat-card>
+            </div>
+        </div>
+
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,34 @@
+/*
+======================================
+; Title: not-found.component.css
+; Author: Janis Gonzalez
+; Date: July 16, 2023
+; Description: not found css file
+; Sources Used:
+; WEB-425 Capstone Instructions
+;=====================================
+*/
+
+.not-found {
+    color: white;
+    text-align: center;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.error {
+    text-align: center;
+    font-size: 5em;
+    color: #9e7e00;
+}
+
+.error2 {
+    text-align: center;
+    font-size: 2em;
+    color: #9e7e00;
+}

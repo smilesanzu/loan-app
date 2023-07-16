@@ -1,0 +1,24 @@
+/*
+======================================
+; Title: about.component.css
+; Author: Janis Gonzalez
+; Date: July 16, 2023
+; Description: about component css file for capstone
+; Sources Used:
+; WEB-425 Capstone Instructions
+;=====================================
+*/
+
+.loan-title {
+    color: #9e7e00;
+}
+
+a {
+    color: #2196F3;
+}
+
+.about {
+    text-align: left;
+    color: white;
+    font-size: medium;
+}

@@ -1,0 +1,19 @@
+<!--
+======================================
+; Title: interest.component.html
+; Author: Janis Gonzalez
+; Date: July 16, 2023
+; Description: interest HTML file
+; Sources Used:
+; WEB-425 Capstone Instructions
+=====================================
+-->
+
+<div>
+    <div class="interest-paid font-black">
+        Total interest paid:
+    </div><br><br>
+    <div class="interest-paid font-white">
+        {{ "$" + (interest | number:'1.2-2') }}
+    </div>
+</div>
